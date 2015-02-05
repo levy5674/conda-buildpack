@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "DEBUG ----> Looking for post compile hook from ${PWD}"
 if [ -f bin/post_compile ]; then
     echo "-----> Running post-compile hook"
     chmod +x bin/post_compile
