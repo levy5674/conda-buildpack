@@ -11,6 +11,8 @@ fi
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing dependencies using Conda"
     conda install --file conda-requirements.txt --yes | indent
+else
+	puts-step "Couldn't find conda-requirements in ${PWD}"
 fi
 
 if [ -f requirements.txt ]; then
